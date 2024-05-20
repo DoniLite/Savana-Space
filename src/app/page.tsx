@@ -2,6 +2,8 @@ import "./globals.css";
 import { TopNavigationBar } from "@/components/Nav";
 import { Card } from "@/components/Cards";
 import Image from "next/image";
+import SearchIcon from "@mui/icons-material/Search";
+import TuneIcon from "@mui/icons-material/Tune";
 
 export default function Home() {
   return (
@@ -15,7 +17,7 @@ export default function Home() {
       </div>
 
       <div className="search">
-        <i></i>
+        <SearchIcon />
         <input
           className=" bg-transparent pl-2 outline-none w-5/6"
           type="search"
@@ -23,15 +25,28 @@ export default function Home() {
           id="search"
           placeholder="Que chechez-vous?"
         />
-        <i></i>
+        <div className=" text-white bg-green-600 p-0.5 rounded-lg">
+          <TuneIcon />
+        </div>
       </div>
 
       <TopNavigationBar />
 
       <p className=" font-bold text-xl ml-3 mt-2">Recommandées</p>
 
-      <div className=" mt-4 pb-20">
-        <Card />
+      <div className=" mt-4 mb-20 flex overflow-x-scroll justify-between">
+        <div className=" w-screen flex-none">
+          <Card />
+        </div>
+        <div className=" w-screen flex-none">
+          <Card />
+        </div>
+        <div className=" w-screen flex-none">
+          <Card />
+        </div>
+        <div className=" w-screen flex-none">
+          <Card />
+        </div>
       </div>
     </div>
   );

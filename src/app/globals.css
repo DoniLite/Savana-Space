@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 
+::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari et Edge */
+}
+
 .search {
   @apply h-12 bg-white shadow-md rounded-lg flex justify-between items-center p-3 absolute;
   width: 90%;
@@ -16,8 +21,8 @@
 }
 
 .card {
-  @apply rounded-2xl mx-auto shadow-lg;
-  width: 98%;
+  @apply rounded-2xl mx-auto shadow-lg bg-gray-200;
+  width: 90%;
 }
 
 .cover {
@@ -29,4 +34,8 @@
 
 .search input::placeholder {
   @apply text-gray-600 font-bold;
+}
+
+.active {
+  @apply text-white bg-green-600 rounded-t-lg p-3 h-16 relative bottom-6;
 }
