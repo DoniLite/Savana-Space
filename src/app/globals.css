@@ -4,8 +4,10 @@
 
 
 .search {
-  @apply mx-auto h-8 bg-white shadow-md rounded-lg mt-4 flex justify-center items-center p-3;
+  @apply h-12 bg-white shadow-md rounded-lg flex justify-between items-center p-3 absolute;
   width: 90%;
+  top: 22rem;
+  left: 5%;
 }
 
 .topNav {
@@ -14,6 +16,17 @@
 }
 
 .card {
-  @apply rounded-2xl mx-auto shadow-lg rounded-xl;
+  @apply rounded-2xl mx-auto shadow-lg;
   width: 98%;
+}
+
+.cover {
+  @apply h-96 flex justify-between;
+  background-image: url('../assets/img/cover.jpg');
+  background-position: center;
+  background-size: contain;
+}
+
+.search input::placeholder {
+  @apply text-gray-600 font-bold;
 }
